@@ -47,44 +47,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. Featured Project Banner */}
-      <section className="py-20 bg-slate-900/50 border-y border-white/5">
-        <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
-          <div className="flex-1 order-2 md:order-1">
-            <span className="text-blue-400 font-semibold tracking-wider uppercase text-sm">Featured Work</span>
-            <h2 className="text-4xl font-bold mt-2 mb-6">Building the Future of Tech</h2>
-            <p className="text-gray-400 mb-8 text-lg">
-              Check out my latest project, a full-stack AI dashboard that helps users visualize data in real-time. 
-              Built with the MERN stack and powered by Next.js 15.
-            </p>
-            <Link href="/projects">
-              <button className="px-8 py-4 bg-white text-slate-950 font-bold rounded-full hover:bg-gray-200 transition-colors">
-                View All Projects
-              </button>
-            </Link>
-          </div>
-          
-          {/* Image Container */}
-          <div className="flex-1 h-64 md:h-96 w-full relative overflow-hidden rounded-2xl group order-1 md:order-2 border border-white/10">
-             {/* 2. The Next.js Image Component 
-                - Replace the src below with your image path (e.g., src="/my-project.png")
-                - 'fill' makes it take up the parent container's space
-                - 'object-cover' ensures it doesn't stretch distortingly
-             */}
-             <Image 
-               src="/image.png" // TODO: Replace with your local image path
-               alt="Featured Project Screenshot"
-               fill
-               className="object-cover group-hover:scale-110 transition-transform duration-700"
-             />
-             
-             {/* Optional: A subtle overlay tint to make it match the theme better */}
-             <div className="absolute inset-0 bg-gradient-to-tr from-purple-900/30 to-blue-900/30 pointer-events-none"></div>
-          </div>
-        </div>
-      </section>
-
-      {/* 4. Call to Action (CTA) */}
+      {/* 3. Call to Action (CTA) */}
       <section className="py-32 text-center px-4">
         <motion.div
           initial={{ scale: 0.9, opacity: 0 }}

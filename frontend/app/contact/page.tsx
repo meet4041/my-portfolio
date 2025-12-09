@@ -4,31 +4,47 @@ import { FaEnvelope, FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
 
 export default function Contact() {
   return (
-    <main className="min-h-screen pt-24 px-4 pb-20 max-w-6xl mx-auto flex flex-col md:flex-row gap-12">
+    <main className="min-h-screen pt-32 px-6 pb-20 max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
       
       {/* Left Side: Info */}
       <motion.div 
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
-        className="flex-1"
+        transition={{ duration: 0.5 }}
+        className="flex-1 space-y-8"
       >
-        <h1 className="text-5xl font-bold mb-6">Let's Chat</h1>
-        <p className="text-gray-400 text-lg mb-10">
-          Whether you have a question, a project proposal, or just want to say hi, I'll try my best to get back to you!
-        </p>
+        <div>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white tracking-tight">
+              Let's <span className="text-indigo-500">Chat</span>
+            </h1>
+            <p className="text-zinc-400 text-lg leading-relaxed max-w-xl">
+              Whether you have a question, a project proposal, or just want to say hi, I'll try my best to get back to you!
+            </p>
+        </div>
 
         <div className="space-y-6">
-          <div className="flex items-center gap-4 text-xl">
-            <div className="p-4 bg-slate-800 rounded-full text-blue-400"><FaEnvelope /></div>
-            <span>contact@meetgandhi.dev</span>
+          {/* Email Item */}
+          <div className="flex items-center gap-5 group">
+            <div className="p-4 bg-zinc-900 border border-zinc-800 rounded-full text-indigo-400 group-hover:border-indigo-500/50 group-hover:bg-indigo-500/10 transition-colors">
+                <FaEnvelope size={20} />
+            </div>
+            <span className="text-zinc-300 text-lg group-hover:text-white transition-colors">meetgandhi4041@gmail.com</span>
           </div>
-          <div className="flex items-center gap-4 text-xl">
-            <div className="p-4 bg-slate-800 rounded-full text-purple-400"><FaPhone /></div>
-            <span>+91 98765 43210</span>
+
+          {/* Phone Item */}
+          <div className="flex items-center gap-5 group">
+            <div className="p-4 bg-zinc-900 border border-zinc-800 rounded-full text-rose-400 group-hover:border-rose-500/50 group-hover:bg-rose-500/10 transition-colors">
+                <FaPhone size={20} />
+            </div>
+            <span className="text-zinc-300 text-lg group-hover:text-white transition-colors">+91 6452314322</span>
           </div>
-          <div className="flex items-center gap-4 text-xl">
-            <div className="p-4 bg-slate-800 rounded-full text-green-400"><FaMapMarkerAlt /></div>
-            <span>Ahmedabad, India</span>
+
+          {/* Location Item */}
+          <div className="flex items-center gap-5 group">
+            <div className="p-4 bg-zinc-900 border border-zinc-800 rounded-full text-emerald-400 group-hover:border-emerald-500/50 group-hover:bg-emerald-500/10 transition-colors">
+                <FaMapMarkerAlt size={20} />
+            </div>
+            <span className="text-zinc-300 text-lg group-hover:text-white transition-colors">Ahmedabad, India</span>
           </div>
         </div>
       </motion.div>
@@ -37,23 +53,35 @@ export default function Contact() {
       <motion.div 
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: 0.2 }}
-        className="flex-1 bg-slate-900 p-8 rounded-3xl border border-white/5"
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="flex-1 w-full bg-zinc-900/50 p-8 md:p-10 rounded-3xl border border-white/5 backdrop-blur-sm shadow-xl"
       >
         <form className="space-y-6">
           <div>
-            <label className="block text-sm font-medium text-gray-400 mb-2">Name</label>
-            <input type="text" className="w-full bg-slate-950 border border-white/10 rounded-xl p-4 focus:outline-none focus:border-purple-500 transition-colors" placeholder="John Doe" />
+            <label className="block text-sm font-medium text-zinc-400 mb-2">Name</label>
+            <input 
+                type="text" 
+                className="w-full bg-zinc-950 border border-zinc-800 rounded-xl p-4 text-white focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all placeholder:text-zinc-600" 
+                placeholder="John Doe" 
+            />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-400 mb-2">Email</label>
-            <input type="email" className="w-full bg-slate-950 border border-white/10 rounded-xl p-4 focus:outline-none focus:border-purple-500 transition-colors" placeholder="john@example.com" />
+            <label className="block text-sm font-medium text-zinc-400 mb-2">Email</label>
+            <input 
+                type="email" 
+                className="w-full bg-zinc-950 border border-zinc-800 rounded-xl p-4 text-white focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all placeholder:text-zinc-600" 
+                placeholder="john@example.com" 
+            />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-400 mb-2">Message</label>
-            <textarea rows={5} className="w-full bg-slate-950 border border-white/10 rounded-xl p-4 focus:outline-none focus:border-purple-500 transition-colors" placeholder="Hey, I have a project idea..." />
+            <label className="block text-sm font-medium text-zinc-400 mb-2">Message</label>
+            <textarea 
+                rows={5} 
+                className="w-full bg-zinc-950 border border-zinc-800 rounded-xl p-4 text-white focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all placeholder:text-zinc-600 resize-none" 
+                placeholder="Hey, I have a project idea..." 
+            />
           </div>
-          <button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 py-4 rounded-xl font-bold text-lg hover:opacity-90 transition-opacity">
+          <button className="w-full bg-white text-black py-4 rounded-xl font-bold text-lg hover:bg-zinc-200 transition-colors shadow-lg shadow-white/5">
             Send Message
           </button>
         </form>
