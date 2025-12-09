@@ -25,7 +25,7 @@ const resumeProjects = [
     liveLink: "https://placemate-coral.vercel.app",
     githubLink: "https://github.com/meet4041/placemate"
   },
-  
+
   {
     _id: "3",
     title: "AgroAID",
@@ -106,7 +106,7 @@ const resumeProjects = [
     liveLink: "krux-finance-app.vercel.app",
     githubLink: "https://github.com/meet4041/krux-finance-app"
   },
-  
+
   {
     _id: "12",
     title: "Blood Bank P2P",
@@ -124,7 +124,7 @@ const resumeProjects = [
     tags: ["Node.js", "Llama 3", "Groq API", "GenAI"],
     githubLink: "https://github.com/meet4041/Josh-AI-Finance-Assistant"
   },
-  
+
 ];
 
 interface Project {
@@ -144,7 +144,8 @@ export default function ProjectsPage() {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const res = await fetch('http://localhost:5000/api/projects');
+        const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+        const res = await fetch(`${apiUrl}/api/projects`);
         if (!res.ok) throw new Error("Backend offline");
         const data = await res.json();
 
