@@ -28,7 +28,7 @@ const Navbar = () => {
           
           {/* Logo */}
           <Link href="/" className="text-xl font-bold tracking-tight text-white hover:opacity-80 transition-opacity z-50">
-            meet<span className="text-indigo-400">.dev</span>
+            Meet<span className="text-indigo-400"> Gandhi</span>
           </Link>
 
           {/* Desktop Navigation */}
