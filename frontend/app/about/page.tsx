@@ -17,51 +17,51 @@ const techStack = [
 
 export default function About() {
   return (
-    // REMOVED 'bg-zinc-950' to allow the global background to show through
-    <main className="min-h-screen w-full flex flex-col justify-center px-6 py-24 md:px-12">
-      <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-        
-        {/* Left Column: Biography */}
+    <main className="min-h-screen w-full px-6 py-20 md:px-10">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-14 lg:grid-cols-2 lg:gap-24">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
           className="space-y-8"
         >
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white tracking-tight">
-            About <span className="text-indigo-500">Me</span>
-          </h1>
-          
-          <div className="space-y-6 text-zinc-400 text-lg md:text-xl leading-relaxed">
+          <div className="space-y-4">
+            <p className="eyebrow">About</p>
+            <h1 className="section-title text-6xl font-semibold text-[var(--color-text)] md:text-7xl">
+              An AI-focused developer who likes systems that feel clean.
+            </h1>
+          </div>
+
+          <div className="space-y-6 text-lg leading-8 text-[var(--color-muted)] md:text-xl">
             <p>
-              Hi, I'm <span className="text-white font-semibold">Meet Gandhi</span>. 
-              My journey in tech is driven by a simple motto: 
-              <span className="italic text-indigo-400 block mt-3 border-l-4 border-indigo-500 pl-6 py-2 bg-zinc-900/50 rounded-r-xl">
-                "Trying to make 'Hello World' a new 'abc'."
+              Hi, I&apos;m <span className="font-semibold text-[var(--color-text)]">Meet Gandhi</span>.
+              My journey in tech is driven by a simple motto:
+              <span className="mt-4 block border-l-2 border-[var(--color-accent)] bg-[rgba(107,255,211,.04)] py-3 pl-6 font-mono text-sm text-[var(--color-accent)]">
+                &ldquo;Trying to make &lsquo;Hello World&rsquo; a new &lsquo;abc&rsquo;.&rdquo;
               </span>
             </p>
             <p>
-              I am currently pursuing my <strong>M.Sc. IT at DAIICT ('26)</strong>. With a strong foundation in 
-              systems programming (C/C++) and modern backend architectures, I specialize in building 
-              scalable solutions and intelligent AI integrations.
+              I am currently pursuing my <strong className="text-[var(--color-text)]">M.Sc. IT at DAIICT (&apos;26)</strong>. With a strong foundation in
+              systems programming, backend architecture, and modern web development, I enjoy building software that blends engineering depth with product clarity.
             </p>
             <p>
-              Beyond the code, I am actively involved in the <strong>AI Club</strong> and <strong>GDGC Club</strong> at DAIICT. 
-              I thrive on solving complex problems, from low-level logic to high-level machine learning models.
+              Beyond the code, I am actively involved in the <strong className="text-[var(--color-text)]">AI Club</strong> and <strong className="text-[var(--color-text)]">GDGC Club</strong> at DAIICT.
+              I thrive on solving complex problems, from low-level logic and APIs to machine learning prototypes and AI-assisted tools.
             </p>
           </div>
         </motion.div>
 
-        {/* Right Column: Tech Stack Grid */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="bg-zinc-900/50 p-10 rounded-[2rem] border border-white/5 backdrop-blur-sm shadow-2xl"
+          className="surface-card rounded-lg p-8 md:p-10"
         >
-          <h3 className="text-3xl font-bold mb-10 text-center text-white">My Tech Stack</h3>
-          
-          {/* Grid */}
+          <div className="mb-10 text-center">
+            <p className="eyebrow mb-3">Toolkit</p>
+            <h3 className="font-mono text-3xl font-semibold text-[var(--color-text)]">TECH_STACK</h3>
+          </div>
+
           <div className="grid grid-cols-3 gap-8">
             {techStack.map((tech, idx) => (
               <motion.div
@@ -72,10 +72,10 @@ export default function About() {
                 whileHover={{ scale: 1.1 }}
                 className="flex flex-col items-center gap-3 group cursor-default"
               >
-                <div className={`text-5xl ${tech.color} group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.2)] transition-all`}>
+                <div className={`text-5xl ${tech.color} transition-all group-hover:scale-105`}>
                   {tech.icon}
                 </div>
-                <span className="text-sm font-medium text-center text-zinc-500 group-hover:text-white transition-colors">
+                <span className="text-center text-sm font-semibold text-[var(--color-muted)] transition-colors group-hover:text-[var(--color-text)]">
                   {tech.name}
                 </span>
               </motion.div>

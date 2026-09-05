@@ -154,7 +154,7 @@ export default function ProjectsPage() {
         } else {
           setProjects(data);
         }
-      } catch (error) {
+      } catch {
         console.log('Using static project data.');
         setProjects(resumeProjects);
       } finally {
@@ -166,31 +166,29 @@ export default function ProjectsPage() {
   }, []);
 
   return (
-    // REMOVED 'bg-zinc-950' so it uses the global transparent/clean background
-    <main className="min-h-screen pt-32 px-6 pb-20 max-w-[1400px] mx-auto">
-
-      {/* Header */}
-      <div className="text-center mb-16 space-y-4">
+    <main className="mx-auto min-h-screen max-w-[1400px] px-6 pb-20 pt-10 md:px-10">
+      <div className="mb-16 space-y-4 text-center">
+        <p className="eyebrow">Selected Work</p>
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-4xl md:text-6xl font-bold text-white tracking-tight"
+          className="section-title text-5xl font-semibold text-[var(--color-text)] md:text-7xl"
         >
-          Featured <span className="text-indigo-500">Work</span>
+          Featured work with clarity at the core.
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="text-zinc-400 text-lg max-w-2xl mx-auto"
+          className="mx-auto max-w-2xl text-lg leading-8 text-[var(--color-muted)]"
         >
+          A mix of product design, web engineering, backend systems, and AI-driven experiments.
         </motion.p>
       </div>
 
-      {/* Grid Layout: 3 Columns on Large Screens */}
       {loading ? (
         <div className="flex justify-center mt-20">
-          <div className="w-8 h-8 border-4 border-indigo-500 border-t-transparent rounded-full animate-spin"></div>
+          <div className="h-8 w-8 animate-spin rounded-full border-4 border-[var(--color-accent)] border-t-transparent"></div>
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

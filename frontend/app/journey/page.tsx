@@ -4,6 +4,20 @@ import { motion } from 'framer-motion';
 // Data from Meet-Gandhi.pdf
 const history = [
   {
+    role: "AI/ML Engineer",
+    company: "BOSC Tech Labs",
+    link: "https://bosctechlabs.com",
+    date: "July 2026 - Present",
+    desc: "Working on CricVision, an AI-powered cricket analytics and coaching platform that uses video analysis to deliver actionable feedback and help players improve their performance."
+  },
+  {
+    role: "AI/ML Intern",
+    company: "BOSC Tech Labs",
+    link: "https://bosctechlabs.com",
+    date: "January 2026 - July 2026",
+    desc: "Contributed to AI and machine learning development, gaining hands-on experience building and improving practical, product-focused AI solutions."
+  },
+  {
     role: "Data Science Intern",
     company: "Celebal Technology",
     link: "https://celebaltech.com",
@@ -50,10 +64,13 @@ const history = [
 
 export default function Experience() {
   return (
-    <main className="min-h-screen pt-24 px-4 pb-20 max-w-4xl mx-auto">
-      <h1 className="text-4xl md:text-5xl font-bold mb-12 text-center">My Journey</h1>
+    <main className="mx-auto min-h-screen max-w-4xl px-6 pb-20 pt-10 md:px-8">
+      <div className="mb-12 text-center">
+        <p className="eyebrow mb-3">Journey</p>
+        <h1 className="section-title text-5xl font-semibold text-[var(--color-text)] md:text-7xl">The path so far</h1>
+      </div>
       
-      <div className="relative border-l-2 border-indigo-500/30 ml-4 md:ml-0 md:pl-8 space-y-12">
+      <div className="relative ml-4 space-y-12 border-l border-[var(--color-line)] md:ml-0 md:pl-8">
         {history.map((item, i) => (
           <motion.div
             key={i}
@@ -62,23 +79,20 @@ export default function Experience() {
             transition={{ delay: i * 0.1 }}
             className="relative pl-8 md:pl-0"
           >
-            {/* Dot on the timeline */}
-            <div className="absolute -left-[9px] md:-left-[41px] top-0 w-4 h-4 rounded-full bg-indigo-500 shadow-[0_0_10px_rgba(168,85,247,0.5)]" />
+            <div className="absolute -left-[7px] top-0 h-3 w-3 rotate-45 bg-[var(--color-accent)] shadow-[0_0_14px_var(--color-accent)] md:-left-[39px]" />
             
-            <div className="bg-slate-900 p-6 rounded-xl border border-white/5 hover:border-indigo-500/30 transition-all">
-              <span className="text-sm text-indigo-500 font-mono mb-2 block">{item.date}</span>
-              <h3 className="text-2xl font-bold text-white mb-1">{item.role}</h3>
-              
-              {/* UPDATED: Company Name with Link */}
-              <h4 className="text-xl text-gray-400 mb-4 flex items-center gap-2">
+            <div className="surface-card rounded-lg p-6">
+              <span className="mb-2 block text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]">{item.date}</span>
+              <h3 className="mb-1 text-3xl font-semibold text-[var(--color-text)]">{item.role}</h3>
+
+              <h4 className="mb-4 flex items-center gap-2 text-lg text-[var(--color-muted)]">
                 <a 
                   href={item.link} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="hover:text-indigo-400 hover:underline transition-colors decoration-indigo-500/50 flex items-center gap-1 w-fit"
+                  className="flex w-fit items-center gap-1 transition-colors hover:text-[var(--color-accent-strong)] hover:underline decoration-[var(--color-accent)]/50"
                 >
                   {item.company}
-                  {/* External Link Icon (SVG) */}
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="inline-block opacity-70">
                     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                     <polyline points="15 3 21 3 21 9"></polyline>
@@ -87,7 +101,7 @@ export default function Experience() {
                 </a>
               </h4>
 
-              <p className="text-gray-300 leading-relaxed text-sm md:text-base">{item.desc}</p>
+              <p className="text-sm leading-7 text-[var(--color-muted)] md:text-base">{item.desc}</p>
             </div>
           </motion.div>
         ))}
