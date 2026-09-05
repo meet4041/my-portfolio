@@ -1,6 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
-import { FaEnvelope, FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
+import { FaArrowRight, FaEnvelope, FaGithub, FaLinkedin, FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
 
 export default function Contact() {
   return (
@@ -14,27 +14,27 @@ export default function Contact() {
         <div>
           <p className="eyebrow mb-3">Contact</p>
           <h1 className="section-title mb-6 text-5xl font-semibold text-[var(--color-text)] md:text-7xl">
-            Let&apos;s make something that feels effortless.
+            Let&apos;s talk about the work.
           </h1>
           <p className="max-w-xl text-lg leading-8 text-[var(--color-muted)]">
-            Whether you have a project idea, a role, or a collaboration in mind, I&apos;d love to hear what you&apos;re building.
+            If you have a role, a collaboration, or an interesting engineering problem in mind, send me an email. I usually reply within a day or two.
           </p>
         </div>
 
         <div className="space-y-6">
-          <div className="flex items-center gap-5 group">
+          <a href="mailto:meetgandhi4041@gmail.com" className="flex items-center gap-5 group">
             <div className="border border-[var(--color-line)] bg-[rgba(107,255,211,.04)] p-4 text-[var(--color-accent)]">
                 <FaEnvelope size={20} />
             </div>
             <span className="text-lg text-[var(--color-muted)] transition-colors group-hover:text-[var(--color-text)]">meetgandhi4041@gmail.com</span>
-          </div>
+          </a>
 
-          <div className="flex items-center gap-5 group">
+          <a href="tel:+916352314322" className="flex items-center gap-5 group">
             <div className="border border-[var(--color-line)] bg-[rgba(107,255,211,.04)] p-4 text-[var(--color-accent)]">
                 <FaPhone size={20} />
             </div>
             <span className="text-lg text-[var(--color-muted)] transition-colors group-hover:text-[var(--color-text)]">+91 6352314322</span>
-          </div>
+          </a>
 
           <div className="flex items-center gap-5 group">
             <div className="border border-[var(--color-line)] bg-[rgba(107,255,211,.04)] p-4 text-[var(--color-accent)]">
@@ -51,35 +51,22 @@ export default function Contact() {
         transition={{ duration: 0.5, delay: 0.2 }}
         className="surface-card w-full flex-1 rounded-lg p-8 md:p-10"
       >
-        <form className="space-y-6">
+        <div className="space-y-8">
           <div>
-            <label className="mb-2 block text-sm font-semibold text-[var(--color-muted)]">Name</label>
-            <input 
-                type="text" 
-                className="w-full border border-[var(--color-line)] bg-black/25 p-4 font-mono text-sm text-[var(--color-text)] focus:border-[var(--color-accent)] focus:outline-none placeholder:text-[var(--color-soft)]" 
-                placeholder="John Doe" 
-            />
+            <p className="eyebrow mb-4">Best way to reach me</p>
+            <h2 className="text-3xl font-semibold text-[var(--color-text)]">Email is best.</h2>
+            <p className="mt-4 leading-7 text-[var(--color-muted)]">Include a little context about what you are building, the problem you are solving, and where I might be able to help.</p>
           </div>
-          <div>
-            <label className="mb-2 block text-sm font-semibold text-[var(--color-muted)]">Email</label>
-            <input 
-                type="email" 
-                className="w-full border border-[var(--color-line)] bg-black/25 p-4 font-mono text-sm text-[var(--color-text)] focus:border-[var(--color-accent)] focus:outline-none placeholder:text-[var(--color-soft)]" 
-                placeholder="john@example.com" 
-            />
+
+          <a href="mailto:meetgandhi4041@gmail.com?subject=Hello%20Meet" className="inline-flex w-full items-center justify-between bg-[var(--color-accent)] px-5 py-4 font-mono text-xs font-bold uppercase tracking-[.12em] text-[#04100d] hover:-translate-y-0.5">
+            Write an email <FaArrowRight />
+          </a>
+
+          <div className="grid grid-cols-2 gap-3">
+            <a href="https://github.com/meet4041" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 border border-[var(--color-line)] px-4 py-3 font-mono text-xs uppercase text-[var(--color-muted)] hover:border-[var(--color-accent)] hover:text-[var(--color-text)]"><FaGithub /> GitHub</a>
+            <a href="https://www.linkedin.com/in/meetgandhi4041/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 border border-[var(--color-line)] px-4 py-3 font-mono text-xs uppercase text-[var(--color-muted)] hover:border-[var(--color-accent)] hover:text-[var(--color-text)]"><FaLinkedin /> LinkedIn</a>
           </div>
-          <div>
-            <label className="mb-2 block text-sm font-semibold text-[var(--color-muted)]">Message</label>
-            <textarea 
-                rows={5} 
-                className="w-full resize-none border border-[var(--color-line)] bg-black/25 p-4 font-mono text-sm text-[var(--color-text)] focus:border-[var(--color-accent)] focus:outline-none placeholder:text-[var(--color-soft)]" 
-                placeholder="Hey, I have a project idea..." 
-            />
-          </div>
-          <button className="w-full bg-[var(--color-accent)] py-4 font-mono text-xs font-bold uppercase tracking-[.14em] text-[#04100d] hover:shadow-[0_0_30px_rgba(107,255,211,.2)]">
-            Send Message
-          </button>
-        </form>
+        </div>
       </motion.div>
     </main>
   );

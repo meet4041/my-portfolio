@@ -12,18 +12,15 @@
 html { scroll-behavior: smooth; }
 body { min-height: 100vh; color: var(--color-text); background: radial-gradient(circle at 18% 0%, rgba(34,211,238,.09), transparent 28rem), radial-gradient(circle at 90% 25%, rgba(107,255,211,.06), transparent 24rem), #05080b; font-family: var(--font-sans), sans-serif; }
 body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none; background-image: linear-gradient(rgba(107,255,211,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(107,255,211,.035) 1px, transparent 1px); background-size: 48px 48px; mask-image: linear-gradient(to bottom, black, transparent 88%); }
-body::after { content: ""; position: fixed; inset: 0; z-index: 100; pointer-events: none; opacity: .12; background: repeating-linear-gradient(to bottom, transparent 0, transparent 3px, rgba(0,0,0,.22) 4px); }
 a, button, input, textarea { transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease, transform 180ms ease, box-shadow 180ms ease; }
 .font-serif { font-family: var(--font-mono), monospace; }
 .surface-card { position: relative; background: linear-gradient(145deg, rgba(13,22,28,.92), rgba(6,12,16,.84)); border: 1px solid var(--color-line); box-shadow: var(--shadow-soft); backdrop-filter: blur(18px); }
-.surface-card::before { content: ""; position: absolute; left: -1px; top: 20px; width: 2px; height: 32px; background: var(--color-accent); box-shadow: 0 0 18px var(--color-accent); }
 .eyebrow { letter-spacing: .22em; text-transform: uppercase; color: var(--color-accent); font: 700 .72rem/1.4 var(--font-mono), monospace; }
 .eyebrow::before { content: "// "; color: var(--color-soft); }
 .section-title { font-family: var(--font-sans), sans-serif; letter-spacing: -.055em; line-height: .96; }
 .balanced-text { text-wrap: balance; }
 ::selection { background: rgba(107,255,211,.25); color: white; }
 ::-webkit-scrollbar { width: 8px; } ::-webkit-scrollbar-track { background: #05080b; } ::-webkit-scrollbar-thumb { background: #1d3534; border-radius: 99px; }
-@keyframes scan { from { transform: translateY(-100%); } to { transform: translateY(650%); } }
 @keyframes blink { 50% { opacity: .25; } }
-.scan-line { animation: scan 8s linear infinite; } .status-dot { animation: blink 1.8s ease-in-out infinite; }
+.status-dot { animation: blink 1.8s ease-in-out infinite; }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; } }

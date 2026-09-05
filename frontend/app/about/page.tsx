@@ -41,12 +41,10 @@ export default function About() {
               </span>
             </p>
             <p>
-              I am currently pursuing my <strong className="text-[var(--color-text)]">M.Sc. IT at DAIICT (&apos;26)</strong>. With a strong foundation in
-              systems programming, backend architecture, and modern web development, I enjoy building software that blends engineering depth with product clarity.
+              I am an <strong className="text-[var(--color-text)]">AI/ML Engineer at BOSC Tech Labs</strong> and currently work on CricVision, an AI-powered cricket coaching product. I am also pursuing my <strong className="text-[var(--color-text)]">M.Sc. IT at DAIICT (&apos;26)</strong>.
             </p>
             <p>
-              Beyond the code, I am actively involved in the <strong className="text-[var(--color-text)]">AI Club</strong> and <strong className="text-[var(--color-text)]">GDGC Club</strong> at DAIICT.
-              I thrive on solving complex problems, from low-level logic and APIs to machine learning prototypes and AI-assisted tools.
+              Outside work, I have helped organize sessions and events with the <strong className="text-[var(--color-text)]">AI Club</strong> and <strong className="text-[var(--color-text)]">GDG on Campus</strong> at DAIICT. Those communities taught me as much about explaining technical ideas and working with people as they did about software.
             </p>
           </div>
         </motion.div>

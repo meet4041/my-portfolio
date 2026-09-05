@@ -4,27 +4,23 @@ import { motion } from 'framer-motion';
 const skillCategories = [
   {
     title: "Languages",
-    skills: ["Python", "C", "C++", "Go", "React", "Java", "JavaScript"]
+    skills: ["Python", "JavaScript", "Dart", "Go", "Java", "C", "C++"]
   },
   {
-    title: "Frameworks",
-    skills: ["Flask", "Django", "FastAPI", "Flutter", "Tailwind", "Bootstrap", "Next.js"]
+    title: "Web & Mobile",
+    skills: ["React", "Next.js", "Flutter", "Flask", "Django", "FastAPI", "Tailwind CSS"]
   },
   {
-    title: "Cloud & Databases",
-    skills: ["MongoDB", "MySQL", "Supabase", "PostgreSQL", "SQLite"]
+    title: "AI & Data",
+    skills: ["OpenCV", "Scikit-learn", "NumPy", "Pandas", "Matplotlib", "LLMs", "Computer Vision"]
   },
   {
-    title: "Libraries & Tools",
-    skills: ["Numpy", "Pandas", "Matplotlib", "OpenCV", "Git", "GitHub", "Docker", "Postman", "VS Code"]
+    title: "Databases",
+    skills: ["PostgreSQL", "MongoDB", "MySQL", "SQLite", "Supabase"]
   },
   {
-    title: "Coursework & Interests",
-    skills: ["DSA", "Operating Systems", "DBMS", "Computer Networks", "Agentic AI", "AI/ML"]
-  },
-  {
-    title: "Soft Skills",
-    skills: ["Team Collaboration", "Leadership", "Problem Solving", "Communication", "Time Management"]
+    title: "Tools",
+    skills: ["Git", "GitHub", "Docker", "Postman", "VS Code"]
   }
 ];
 
@@ -39,7 +35,7 @@ export default function Skills() {
           transition={{ duration: 0.5 }}
           className="section-title mb-6 text-5xl font-semibold text-[var(--color-text)] md:text-7xl"
         >
-          Technical depth for AI and modern product engineering.
+          The tools I use to build and ship.
         </motion.h1>
         <motion.p 
           initial={{ opacity: 0, y: 20 }}
@@ -47,7 +43,7 @@ export default function Skills() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="mx-auto max-w-2xl text-lg leading-8 text-[var(--color-muted)]"
         >
-          The stack I use when building model-backed features, developer-friendly systems, and polished interfaces.
+          A practical stack shaped by coursework, personal projects, and production AI work.
         </motion.p>
       </div>
 

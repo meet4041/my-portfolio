@@ -8,14 +8,14 @@ const history = [
     company: "BOSC Tech Labs",
     link: "https://bosctechlabs.com",
     date: "July 2026 - Present",
-    desc: "Working on CricVision, an AI-powered cricket analytics and coaching platform that uses video analysis to deliver actionable feedback and help players improve their performance."
+    desc: "Working on CricVision, an AI-powered cricket coaching product. My focus is video analysis: turning practice footage into clear feedback that players and coaches can use."
   },
   {
     role: "AI/ML Intern",
     company: "BOSC Tech Labs",
     link: "https://bosctechlabs.com",
     date: "January 2026 - July 2026",
-    desc: "Contributed to AI and machine learning development, gaining hands-on experience building and improving practical, product-focused AI solutions."
+    desc: "Joined BOSC as an intern and worked on applied machine-learning problems inside a product team. The role grew into my current AI/ML Engineer position."
   },
   {
     role: "Data Science Intern",
@@ -29,21 +29,21 @@ const history = [
     company: "Sports Committee DAIICT",
     link: "https://www.linkedin.com/company/sports-committee-da-iict/posts/?feedView=all", 
     date: "Jan 2025 - Dec 2025",
-    desc: "Sports Committee Demonstrated strong leadership and organizational skills by managing logistics, inventory, and scheduling for inter-university athletic tournaments. Cultivated teamwork and discipline among peers while ensuring the seamless execution of high-energy sporting events under tight deadlines."
+    desc: "Managed logistics, inventory, and scheduling for inter-university sports events. It was hands-on work that taught me how to coordinate a team under tight deadlines."
   },
   {
     role: "Member",
-    company: "Google Developer Group on Campus(GDG) DAIICT",
+    company: "GDG on Campus, DAIICT",
     link: "https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Aorganization%3A97938393&keywords=google%20developer%20groups%20on%20campus%20dau&origin=RICH_QUERY_SUGGESTION&position=0&searchId=3f28e23a-6e54-4aa7-aeb3-33010a396ef8&sid=Bai&spellCorrectionEnabled=false",
     date: "Jan 2024 - Dec 2025",
-    desc: "GDG (Google Developer Groups) Served as a key organizer for campus tech events and hackathons, connecting students with industry standards and the broader developer ecosystem. Facilitated hands-on sessions and community meetups that encouraged skill development in modern web and cloud technologies."
+    desc: "Helped organize campus tech events, hackathons, hands-on sessions, and community meetups for students interested in modern web and cloud development."
   },
   {
     role: "Member",
     company: "AI Club DAIICT",
     link: "https://www.linkedin.com/company/ai-club-daiict/posts/?feedView=all",
     date: "Sep 2024 - Dec 2025",
-    desc: "Actively engaged in exploring emerging artificial intelligence trends by organizing technical workshops and collaborative coding sessions for the student body. Fostered a culture of peer learning and innovation, helping members bridge the gap between theoretical concepts and practical machine learning applications."
+    desc: "Organized technical workshops and collaborative coding sessions focused on practical machine learning and peer learning."
   },
   {
     role: "MSc - Information Technology",
@@ -51,7 +51,7 @@ const history = [
     // College Website
     link: "https://www.daiict.ac.in",
     date: "2024 - Present",
-    desc: "Pursuing Master's degree. Member of AI Club and Google Developer Club & Sports Committee."
+    desc: "Pursuing a Master of Science in Information Technology while building experience through research-led coursework, technical communities, and industry roles."
   },
   {
     role: "BSc - Information Technology",

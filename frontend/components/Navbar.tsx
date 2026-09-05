@@ -26,7 +26,7 @@ const Navbar = () => {
       <nav className="fixed top-0 left-0 w-full z-50 px-4 pt-4 md:px-6">
         <div className="surface-card mx-auto flex max-w-6xl items-center justify-between rounded-lg px-5 py-3.5">
           <Link href="/" className="z-50 font-mono text-sm font-bold tracking-[0.12em] text-[var(--color-text)] hover:text-[var(--color-accent)]">
-            MG<span className="text-[var(--color-accent)]">://</span>PORTFOLIO
+            MEET<span className="text-[var(--color-accent)]">.</span>GANDHI
           </Link>
 
           <ul className="hidden items-center gap-7 md:flex">

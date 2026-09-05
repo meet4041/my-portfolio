@@ -6,15 +6,15 @@ import { motion } from 'framer-motion';
 import { FaCode, FaServer, FaBrain, FaArrowRight } from 'react-icons/fa';
 
 const services = [
-  { icon: <FaBrain />, title: "AI Product Prototypes", desc: "Turning ML and LLM ideas into interfaces people can actually use." },
-  { icon: <FaServer />, title: "Backend & APIs", desc: "Designing reliable services, data flows, and integrations that support real products." },
-  { icon: <FaCode />, title: "Frontend Systems", desc: "Crafting calm, responsive interfaces that make complex workflows feel lighter." },
+  { icon: <FaBrain />, title: "Applied AI", desc: "Computer vision, model integration, and evaluation for features used in real products." },
+  { icon: <FaServer />, title: "Backend Engineering", desc: "APIs, data processing, authentication, and the infrastructure around ML workflows." },
+  { icon: <FaCode />, title: "Product Development", desc: "Taking an idea from a working prototype to a clear, responsive web or mobile experience." },
 ];
 
 const principles = [
-  'Models are only useful when the UX is clear.',
-  'Developer tools should feel as polished as consumer products.',
-  'Backend architecture should stay simple before it scales.',
+  'Start with the user problem, then decide whether AI is actually needed.',
+  'Measure model behaviour with real examples, not only a headline metric.',
+  'Keep the system understandable enough for the next engineer to improve it.',
 ];
 
 export default function Home() {
@@ -25,11 +25,11 @@ export default function Home() {
       <section className="mx-auto max-w-6xl px-6 py-20 md:px-10">
         <div className="mb-14 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="eyebrow mb-3">Services</p>
-            <h2 className="section-title text-5xl font-semibold text-[var(--color-text)] md:text-6xl">Engineering domains</h2>
+            <p className="eyebrow mb-3">What I work on</p>
+            <h2 className="section-title text-5xl font-semibold text-[var(--color-text)] md:text-6xl">From model to product.</h2>
           </div>
           <p className="balanced-text max-w-xl text-base leading-7 text-[var(--color-muted)] md:text-lg">
-            I like products that feel technically sharp and visually restrained, especially where AI meets real user workflows.
+            My work sits between machine learning, backend engineering, and the interface where people use the result.
           </p>
         </div>
 
@@ -57,7 +57,7 @@ export default function Home() {
         <div className="surface-card rounded-lg p-8 md:p-10">
           <div className="mb-8">
             <p className="eyebrow mb-3">Approach</p>
-            <h2 className="section-title text-4xl font-semibold text-[var(--color-text)] md:text-5xl">Built on clear engineering principles.</h2>
+            <h2 className="section-title text-4xl font-semibold text-[var(--color-text)] md:text-5xl">How I approach the work.</h2>
           </div>
           <div className="grid gap-4 md:grid-cols-3">
             {principles.map((principle, index) => (
@@ -85,10 +85,10 @@ export default function Home() {
           whileInView={{ scale: 1, opacity: 1 }}
           className="surface-card mx-auto max-w-5xl rounded-lg p-12 text-center md:p-20"
         >
-          <p className="eyebrow mb-4">Let&apos;s create</p>
-          <h2 className="section-title mb-6 text-5xl font-semibold text-[var(--color-text)] md:text-7xl">Have a complex problem? Let&apos;s ship the solution.</h2>
+          <p className="eyebrow mb-4">Get in touch</p>
+          <h2 className="section-title mb-6 text-5xl font-semibold text-[var(--color-text)] md:text-7xl">Working on something useful?</h2>
           <p className="mx-auto mb-10 max-w-2xl text-lg leading-8 text-[var(--color-muted)]">
-            I&apos;m open to AI product builds, backend-heavy development, and frontend work where clarity matters as much as capability.
+            I&apos;m always interested in thoughtful AI products, computer vision, and engineering problems grounded in real user needs.
           </p>
           <Link
             href="/contact"

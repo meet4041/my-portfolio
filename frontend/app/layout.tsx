@@ -3,7 +3,7 @@ import Navbar from '@/components/Navbar';
 
 export const metadata = {
   title: 'Meet Gandhi — AI/ML & Full-Stack Engineer',
-  description: 'Engineer building intelligent products, robust backend systems, and precise digital experiences.',
+  description: 'AI/ML Engineer at BOSC Tech Labs working on computer vision, backend systems, and useful digital products.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
