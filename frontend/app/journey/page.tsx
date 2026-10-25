@@ -1,10 +1,13 @@
 'use client';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { FaArrowRight } from 'react-icons/fa';
 
 // Data from Meet-Gandhi.pdf
 const history = [
   {
     role: "AI/ML Engineer",
+    kind: "Work",
     company: "BOSC Tech Labs",
     link: "https://bosctechlabs.com",
     date: "July 2026 - Present",
@@ -12,6 +15,7 @@ const history = [
   },
   {
     role: "AI/ML Intern",
+    kind: "Work",
     company: "BOSC Tech Labs",
     link: "https://bosctechlabs.com",
     date: "January 2026 - July 2026",
@@ -19,42 +23,48 @@ const history = [
   },
   {
     role: "Data Science Intern",
+    kind: "Work",
     company: "Celebal Technology",
     link: "https://celebaltech.com",
     date: "May 2025 - July 2025",
     desc: "Developed a network anomaly detection tool using Python. Implemented ML models with Scikit-learn (15% accuracy boost), preprocessed large datasets using Pandas/NumPy, and validated systems on benchmark datasets."
   },
   {
-    role: "Core Member",
+    role: "Core Committee Member",
+    kind: "Leadership",
     company: "Sports Committee DAIICT",
     link: "https://www.linkedin.com/company/sports-committee-da-iict/posts/?feedView=all", 
     date: "Jan 2025 - Dec 2025",
     desc: "Managed logistics, inventory, and scheduling for inter-university sports events. It was hands-on work that taught me how to coordinate a team under tight deadlines."
   },
   {
-    role: "Member",
+    role: "Community Organizer",
+    kind: "Community",
     company: "GDG on Campus, DAIICT",
     link: "https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Aorganization%3A97938393&keywords=google%20developer%20groups%20on%20campus%20dau&origin=RICH_QUERY_SUGGESTION&position=0&searchId=3f28e23a-6e54-4aa7-aeb3-33010a396ef8&sid=Bai&spellCorrectionEnabled=false",
     date: "Jan 2024 - Dec 2025",
     desc: "Helped organize campus tech events, hackathons, hands-on sessions, and community meetups for students interested in modern web and cloud development."
   },
   {
-    role: "Member",
+    role: "Workshop Organizer",
+    kind: "Community",
     company: "AI Club DAIICT",
     link: "https://www.linkedin.com/company/ai-club-daiict/posts/?feedView=all",
     date: "Sep 2024 - Dec 2025",
     desc: "Organized technical workshops and collaborative coding sessions focused on practical machine learning and peer learning."
   },
   {
-    role: "MSc - Information Technology",
-    company: "Dhirubhai Ambani Institute (DAU)",
+    role: "M.Sc. Information Technology",
+    kind: "Education",
+    company: "DAIICT",
     // College Website
     link: "https://www.daiict.ac.in",
     date: "2024 - Present",
     desc: "Pursuing a Master of Science in Information Technology while building experience through research-led coursework, technical communities, and industry roles."
   },
   {
-    role: "BSc - Information Technology",
+    role: "B.Sc. Information Technology",
+    kind: "Education",
     company: "GLS University",
     link: "https://www.glsuniversity.ac.in",
     date: "2021 - 2024",
@@ -68,6 +78,7 @@ export default function Experience() {
       <div className="mb-12 text-center">
         <p className="eyebrow mb-3">Journey</p>
         <h1 className="section-title text-5xl font-semibold text-[var(--color-text)] md:text-7xl">The path so far</h1>
+        <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[var(--color-muted)]">A timeline of the roles, communities, and learning that shaped how I build useful technology.</p>
       </div>
       
       <div className="relative ml-4 space-y-12 border-l border-[var(--color-line)] md:ml-0 md:pl-8">
@@ -75,14 +86,17 @@ export default function Experience() {
           <motion.div
             key={i}
             initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ delay: i * 0.1 }}
             className="relative pl-8 md:pl-0"
           >
             <div className="absolute -left-[7px] top-0 h-3 w-3 rotate-45 bg-[var(--color-accent)] shadow-[0_0_14px_var(--color-accent)] md:-left-[39px]" />
             
             <div className="surface-card rounded-lg p-6">
-              <span className="mb-2 block text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]">{item.date}</span>
+              <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+                <span className="block text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-accent)]">{item.date}</span>
+                <span className="border border-[var(--color-line)] bg-[rgba(107,255,211,.04)] px-2.5 py-1 font-mono text-[10px] uppercase tracking-[.14em] text-[var(--color-soft)]">{item.kind}</span>
+              </div>
               <h3 className="mb-1 text-3xl font-semibold text-[var(--color-text)]">{item.role}</h3>
 
               <h4 className="mb-4 flex items-center gap-2 text-lg text-[var(--color-muted)]">
@@ -106,6 +120,13 @@ export default function Experience() {
           </motion.div>
         ))}
       </div>
+
+      <section className="surface-card mx-auto mt-16 max-w-4xl rounded-lg p-10 text-center md:p-14">
+        <p className="eyebrow mb-4">What&apos;s next</p>
+        <h2 className="section-title text-4xl font-semibold text-[var(--color-text)] md:text-5xl">The journey keeps moving.</h2>
+        <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[var(--color-muted)]">See how these experiences turned into real products, experiments, and engineering work.</p>
+        <Link href="/projects" className="mt-8 inline-flex items-center gap-3 bg-[var(--color-accent)] px-7 py-4 font-mono text-xs font-bold uppercase tracking-[.14em] text-[#04100d] hover:-translate-y-0.5 hover:shadow-[0_0_30px_rgba(107,255,211,.22)]">Explore my projects <FaArrowRight /></Link>
+      </section>
     </main>
   );
 }

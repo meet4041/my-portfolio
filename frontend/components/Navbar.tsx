@@ -55,6 +55,9 @@ const Navbar = () => {
 
           <button 
             onClick={() => setIsOpen(!isOpen)} 
+            aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-expanded={isOpen}
+            aria-controls="mobile-navigation"
             className="md:hidden text-[var(--color-muted)] hover:text-[var(--color-accent-strong)] transition-colors z-50 focus:outline-none"
           >
             {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
@@ -68,6 +71,8 @@ const Navbar = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
+            id="mobile-navigation"
+            aria-label="Mobile navigation"
             className="fixed inset-0 z-40 flex flex-col items-center justify-center gap-8 bg-[rgba(5,8,11,0.97)] backdrop-blur-xl md:hidden"
           >
             {navLinks.map((link) => (

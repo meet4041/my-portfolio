@@ -23,4 +23,13 @@ a, button, input, textarea { transition: color 180ms ease, background-color 180m
 ::-webkit-scrollbar { width: 8px; } ::-webkit-scrollbar-track { background: #05080b; } ::-webkit-scrollbar-thumb { background: #1d3534; border-radius: 99px; }
 @keyframes blink { 50% { opacity: .25; } }
 .status-dot { animation: blink 1.8s ease-in-out infinite; }
+@keyframes ai-half-motion { 0%, 100% { transform: translateX(-50%) scale(1); } 50% { transform: translateX(calc(-50% - 3px)) scale(1.012); } }
+@keyframes ai-scanline { 0% { transform: translateY(-110%); opacity: 0; } 18% { opacity: .8; } 70% { opacity: .25; } 100% { transform: translateY(620%); opacity: 0; } }
+@keyframes ai-circuit-pulse { 0%, 100% { opacity: .18; transform: scale(.75); box-shadow: 0 0 4px rgba(107,255,211,.2); } 45% { opacity: 1; transform: scale(1); box-shadow: 0 0 16px 5px rgba(107,255,211,.7); } 70% { opacity: .35; transform: scale(.9); box-shadow: 0 0 8px 2px rgba(107,255,211,.35); } }
+.ai-half-motion { animation: ai-half-motion 5s ease-in-out infinite; transform-origin: center right; }
+.ai-scanline { animation: ai-scanline 3.8s linear infinite; }
+.ai-circuit-light { position: absolute; width: 7px; height: 7px; border-radius: 999px; background: var(--color-accent); animation: ai-circuit-pulse 2.8s ease-in-out infinite; }
+.ai-circuit-light-one { left: 28%; top: 37%; animation-delay: -.4s; }
+.ai-circuit-light-two { left: 62%; top: 56%; animation-delay: -1.5s; }
+.ai-circuit-light-three { left: 42%; top: 72%; animation-delay: -.9s; }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; } }

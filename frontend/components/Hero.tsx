@@ -1,7 +1,8 @@
 'use client';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { FaGithub, FaLinkedin, FaArrowRight, FaCodeBranch } from 'react-icons/fa';
+import Image from 'next/image';
+import { FaGithub, FaLinkedin, FaArrowRight } from 'react-icons/fa';
 
 const stack = ['PYTHON', 'NEXT.JS', 'FASTAPI', 'LLM', 'POSTGRES', 'DOCKER'];
 
@@ -21,14 +22,27 @@ export default function Hero() {
             <a href="https://www.linkedin.com/in/meetgandhi4041/" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="flex h-11 w-11 items-center justify-center border border-[var(--color-line)] text-[var(--color-muted)] hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"><FaLinkedin /></a>
           </motion.div>
         </div>
-        <motion.div initial={{opacity:0,x:24}} animate={{opacity:1,x:0}} transition={{duration:.7,delay:.15}} className="surface-card relative overflow-hidden rounded-lg p-1">
-          <div className="flex items-center justify-between border-b border-[var(--color-line)] px-4 py-3 font-mono text-[10px] tracking-[.12em] text-[var(--color-soft)]"><span>CURRENT WORK</span><span>2026</span></div>
-          <div className="space-y-6 p-6 md:p-8">
-            <div><p className="mb-3 font-mono text-xs uppercase tracking-[.16em] text-[var(--color-accent)]">CricVision</p><h2 className="text-3xl font-semibold leading-tight text-[var(--color-text)]">Computer vision for cricket coaching.</h2><p className="mt-4 leading-7 text-[var(--color-muted)]">Building video-analysis workflows that turn raw match and practice footage into feedback people can act on.</p></div>
-            <div className="grid grid-cols-2 gap-px overflow-hidden border border-[var(--color-line)] bg-[var(--color-line)]"><div className="bg-[#081014] p-5"><p className="font-mono text-sm font-bold text-[var(--color-accent)]">AI/ML</p><p className="mt-2 font-mono text-[9px] uppercase tracking-[.14em] text-[var(--color-soft)]">Engineering</p></div><div className="bg-[#081014] p-5"><p className="font-mono text-sm font-bold text-[var(--color-accent-strong)]">VIDEO</p><p className="mt-2 font-mono text-[9px] uppercase tracking-[.14em] text-[var(--color-soft)]">Analysis</p></div></div>
-            <div className="border border-[var(--color-line)] bg-black/30 p-4 font-mono text-[11px] leading-6 text-[var(--color-muted)]"><p className="mb-2 flex items-center gap-2 text-[var(--color-accent)]"><FaCodeBranch /> BOSC TECH LABS</p><p>Intern → AI/ML Engineer</p></div>
-          </div>
-        </motion.div>
+        <div className="space-y-6">
+          <motion.div initial={{opacity:0,x:24}} animate={{opacity:1,x:0}} transition={{duration:.7,delay:.15}} className="surface-card relative overflow-hidden rounded-lg p-1">
+            <div className="relative aspect-[1/1.02] overflow-hidden rounded-md">
+              <Image src="/meet-gandhi-ai.jpg" alt="Meet Gandhi shown as half human and half AI" fill priority className="object-cover object-center" sizes="(max-width: 1024px) 100vw, 38vw" />
+              <div className="pointer-events-none absolute inset-y-0 left-1/2 w-1/2 overflow-hidden" aria-hidden="true">
+                <div className="relative h-full w-[200%] -translate-x-1/2 ai-half-motion">
+                  <Image src="/meet-gandhi-ai.jpg" alt="" fill className="object-cover object-center" sizes="38vw" />
+                </div>
+                <div className="ai-scanline absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-transparent via-[rgba(107,255,211,.35)] to-transparent" />
+                <span className="ai-circuit-light ai-circuit-light-one" />
+                <span className="ai-circuit-light ai-circuit-light-two" />
+                <span className="ai-circuit-light ai-circuit-light-three" />
+              </div>
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#05080b] via-[#05080b]/70 to-transparent px-6 pb-5 pt-16">
+                <p className="font-mono text-[10px] uppercase tracking-[.16em] text-[var(--color-accent)]">Meet Gandhi</p>
+                <p className="mt-1 text-sm text-[var(--color-text)]">AI/ML + Full-Stack Engineer</p>
+              </div>
+            </div>
+          </motion.div>
+
+        </div>
       </div>
     </section>
   );
