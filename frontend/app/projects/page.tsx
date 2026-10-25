@@ -6,27 +6,6 @@ import ProjectCard from '@/components/ProjectCard';
 
 const projects = [
   {
-    _id: "1",
-    type: "website",
-    title: "Althub Student Connect",
-    description: "A platform where students, alumni, and institutions can connect around mentorship, career opportunities, and their campus community.",
-    image: "/althub.png",
-    tags: ["JavaScript", "Node", "React", "MongoDB"],
-    liveLink: "https://althub-student-connect-mu.vercel.app",
-    githubLink: "https://github.com/meet4041/Althub-Student-Connect"
-  },
-  {
-    _id: "2",
-    type: "website",
-    title: "Placemate",
-    description: "A shared workspace for placement officers, students, and companies to manage campus recruitment drives in one place.",
-    image: "/placemate.jpeg",
-    tags: ["Javascript", "Python"],
-    liveLink: "https://placemate-coral.vercel.app",
-    githubLink: "https://github.com/meet4041/placemate"
-  },
-
-  {
     _id: "3",
     type: "website",
     title: "AgroAID",
@@ -35,37 +14,6 @@ const projects = [
     tags: ["Python", "Scikit-learn", "ML", "Flask"],
     liveLink: "",
     githubLink: "https://github.com/meet4041/AgroAID"
-  },
-  {
-    _id: "4",
-    type: "website",
-    title: "Mini Drive",
-    description: "A secure file management system featuring semantic search via OpenAI embeddings and time-limited sharing links.",
-    image: "/mini-drive.jpeg",
-    tags: ["Django", "Python", "SQLite", "Bootstrap"],
-    liveLink: "",
-    githubLink: "https://github.com/meet4041/mini-drive"
-  },
-
-  {
-    _id: "5",
-    type: "website",
-    title: "Network Anomaly Detector",
-    description: "A Python tool that combines statistical analysis and machine-learning models to identify unusual patterns in network traffic.",
-    image: "/network.png",
-    tags: ["Python", "Networking", "Cybersecurity"],
-    liveLink: "",
-    githubLink: "https://github.com/meet4041/network-anomaly"
-  },
-  {
-    _id: "6",
-    type: "website",
-    title: "Portfolio Website",
-    description: "The site you are viewing: a responsive portfolio built with Next.js, TypeScript, Tailwind CSS, and Framer Motion.",
-    image: "/portfolio.png",
-    tags: ["Next.js", "React", "Tailwind"],
-    liveLink: "https://meetgandhi.dev",
-    githubLink: "https://github.com/meet4041/my-portfolio"
   },
   {
     _id: "7",
@@ -86,6 +34,44 @@ const projects = [
     githubLink: "https://github.com/meet4041/Nexus-Library-System"
   },
   {
+    _id: "4",
+    type: "website",
+    title: "Mini Drive",
+    description: "A secure file management system featuring semantic search via OpenAI embeddings and time-limited sharing links.",
+    image: "/mini-drive.jpeg",
+    tags: ["Django", "Python", "SQLite", "Bootstrap"],
+    liveLink: "",
+    githubLink: "https://github.com/meet4041/mini-drive"
+  },
+  {
+    _id: "14",
+    type: "website",
+    title: "Student API",
+    description: "A Go-based REST API for managing student records with create and read operations, documented and tested through Postman.",
+    image: "/student-api-cover.webp",
+    tags: ["Go", "REST API", "Postman", "CRUD"],
+    githubLink: "https://github.com/meet4041/Student-api"
+  },
+  {
+    _id: "5",
+    type: "website",
+    title: "Network Anomaly Detector",
+    description: "A Python tool that combines statistical analysis and machine-learning models to identify unusual patterns in network traffic.",
+    image: "/network.png",
+    tags: ["Python", "Networking", "Cybersecurity"],
+    liveLink: "",
+    githubLink: "https://github.com/meet4041/network-anomaly-detector"
+  },
+  {
+    _id: "13",
+    type: "website",
+    title: "Josh - AI Finance Assistant",
+    description: "An AI finance agent built with Node.js, Groq API, and Llama3. Features intelligent query routing and tracks income/expenses with 90% accuracy.",
+    image: "/josh.jpeg",
+    tags: ["Node.js", "Llama 3", "Groq API", "GenAI"],
+    githubLink: "https://github.com/meet4041/My-Ai-Agent"
+  },
+  {
     _id: "9",
     type: "website",
     title: "Samudrasetu",
@@ -93,7 +79,7 @@ const projects = [
     image: "/samudrasetu.jpeg",
     tags: ["Django", "Twillio", "Tailwind CSS"],
     liveLink: "",
-    githubLink: "https://github.com/meet4041"
+    githubLink: "https://github.com/meet4041/SAMUDRASETU"
   },
   {
     _id: "10",
@@ -102,7 +88,7 @@ const projects = [
     description: "A VS Code extension that scans your code using Semgrep to detect insecure patterns and surfaces them as Diagnostics with optional Quick Fixes.",
     image: "/cognitiv.png",
     tags: ["Python", "Typescript"],
-    githubLink: "https://github.com/meet4041"
+    githubLink: "https://github.com/meet4041/cognitiv-trust-secure-assistant"
   },
   {
     _id: "11",
@@ -114,7 +100,16 @@ const projects = [
     liveLink: "https://krux-finance-app.vercel.app",
     githubLink: "https://github.com/meet4041/krux-finance-app"
   },
-
+  {
+    _id: "2",
+    type: "website",
+    title: "Placemate",
+    description: "A shared workspace for placement officers, students, and companies to manage campus recruitment drives in one place.",
+    image: "/placemate.jpeg",
+    tags: ["Javascript", "Python"],
+    liveLink: "https://placemate-coral.vercel.app",
+    githubLink: "https://github.com/meet4041/placemate"
+  },
   {
     _id: "12",
     type: "website",
@@ -126,15 +121,116 @@ const projects = [
     githubLink: "https://github.com/meet4041/blood-bank-p2p"
   },
   {
-    _id: "13",
+    _id: "15",
     type: "website",
-    title: "Josh - AI Finance Assistant",
-    description: "An AI finance agent built with Node.js, Groq API, and Llama3. Features intelligent query routing and tracks income/expenses with 90% accuracy.",
-    image: "/josh.jpeg",
-    tags: ["Node.js", "Llama 3", "Groq API", "GenAI"],
-    githubLink: "https://github.com/meet4041/Josh-AI-Finance-Assistant"
+    title: "Archivus",
+    description: "A full-stack archival platform combining a React and Vite client with a Django backend for managing archived content.",
+    image: "https://raw.githubusercontent.com/meet4041/Archivus/main/Archivus-Backend/archivus/media_test/about_us_assets/Nebula.jpg",
+    tags: ["React", "Vite", "Django", "Python"],
+    githubLink: "https://github.com/meet4041/Archivus"
   },
-
+  {
+    _id: "1",
+    type: "website",
+    title: "Althub Student Connect",
+    description: "A platform where students, alumni, and institutions can connect around mentorship, career opportunities, and their campus community.",
+    image: "/althub.png",
+    tags: ["JavaScript", "Node", "React", "MongoDB"],
+    liveLink: "https://althub-student-connect-mu.vercel.app",
+    githubLink: "https://github.com/meet4041/Althub-Student-Connect"
+  },
+  {
+    _id: "16",
+    type: "website",
+    title: "GitHub Repo Healthchecker",
+    description: "A Python CLI that scores GitHub repositories, checks project hygiene and security risks, and exports a polished PDF health report.",
+    image: "/github-repo-healthchecker-cover.webp",
+    tags: ["Python", "GitHub API", "ReportLab", "Security"],
+    githubLink: "https://github.com/meet4041/Github-Repo-Healthchecker"
+  },
+  {
+    _id: "17",
+    type: "website",
+    title: "FolioForge",
+    description: "A PDF-to-portfolio generator that turns a resume into a polished multi-page portfolio site through a Python API and static upload frontend.",
+    image: "https://raw.githubusercontent.com/meet4041/folioforge/main/logo.png",
+    tags: ["Python", "Flask", "PDF Parsing", "Vercel"],
+    githubLink: "https://github.com/meet4041/folioforge"
+  },
+  {
+    _id: "18",
+    type: "website",
+    title: "WebTrack",
+    description: "A local macOS browser activity tracker that records active Chrome and Safari tabs, visit duration, and daily history while keeping data on-device.",
+    image: "/webtrack-cover.webp",
+    tags: ["macOS", "AppleScript", "Chrome", "Safari"],
+    githubLink: "https://github.com/meet4041/WebTrack"
+  },
+  {
+    _id: "19",
+    type: "website",
+    title: "SnapNest",
+    description: "A macOS background utility that automatically organizes screenshots and downloaded images into dated folders for a cleaner workspace.",
+    image: "https://raw.githubusercontent.com/meet4041/SnapNest/main/assets/snapnest-logo.png",
+    tags: ["Python", "macOS", "Automation", "LaunchAgent"],
+    githubLink: "https://github.com/meet4041/SnapNest"
+  },
+  {
+    _id: "20",
+    type: "website",
+    title: "GestureSpeak",
+    description: "A real-time webcam app that recognizes hand gestures, shows confidence and status, and turns stable gestures into simple communication phrases.",
+    image: "/gesture-speak-cover.webp",
+    tags: ["Python", "MediaPipe", "Computer Vision", "OpenCV"],
+    githubLink: "https://github.com/meet4041/Gesture-Speak"
+  },
+  {
+    _id: "21",
+    type: "website",
+    title: "Pop-Manage",
+    description: "A browser-based cash management tool for tracking and organizing available funds across accounts.",
+    image: "/pop-manage-cover.webp",
+    tags: ["HTML", "CSS", "JavaScript", "Finance"],
+    liveLink: "https://pop-manage.vercel.app",
+    githubLink: "https://github.com/meet4041/Pop-Manage"
+  },
+  {
+    _id: "22",
+    type: "website",
+    title: "ScanIT QR Generator",
+    description: "A lightweight client-side tool that turns company and website details into downloadable QR codes with normalized destination URLs.",
+    image: "/scanit-cover.webp",
+    tags: ["HTML", "CSS", "JavaScript", "QRCode.js"],
+    githubLink: "https://github.com/meet4041/ScanIT"
+  },
+  {
+    _id: "23",
+    type: "website",
+    title: "PixelPress",
+    description: "A private, browser-based image compressor that reduces JPEG, PNG, and WebP file sizes without uploading images to a server.",
+    image: "/pixelpress-cover.webp",
+    tags: ["HTML", "CSS", "JavaScript", "Image Processing"],
+    liveLink: "https://pixel-press-rho.vercel.app",
+    githubLink: "https://github.com/meet4041/Pixel-Press"
+  },
+  {
+    _id: "24",
+    type: "website",
+    title: "GitHub Diary",
+    description: "A responsive GitHub repository portfolio for exploring public repos with details, analytics, filters, favorites, notes, JSON export, and offline PWA access.",
+    image: "/github-diary-cover.webp",
+    tags: ["HTML", "CSS", "JavaScript", "GitHub API", "PWA"],
+    githubLink: "https://github.com/meet4041/Github-Diary"
+  },
+  {
+    _id: "25",
+    type: "website",
+    title: "QueueSaathi",
+    description: "A mobile-friendly virtual queue system where customers join through a shop QR code and owners manage live tokens, walk-ins, and service flow.",
+    image: "/queuesaathi-cover.webp",
+    tags: ["Django", "PostgreSQL", "Neon", "JavaScript", "QR Codes"],
+    githubLink: "https://github.com/meet4041/queuesaathi"
+  },
 ];
 
 export default function ProjectsPage() {

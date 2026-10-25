@@ -22,6 +22,7 @@ const ProjectCard = ({ title, description, image, tags, liveLink, githubLink }: 
           src={image} 
           alt={title} 
           fill
+          quality={100}
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
           className="relative z-10 h-full w-full object-cover opacity-90 transition-transform duration-500 group-hover:scale-105 group-hover:opacity-100" 
           onError={(e) => (e.currentTarget.style.display = 'none')}
