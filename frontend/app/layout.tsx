@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behavior="smooth">
       <body className="bg-[var(--color-bg)] text-[var(--color-text)]">
         <Navbar />
         <div className="pt-20 md:pt-24">

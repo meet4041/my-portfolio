@@ -25,7 +25,7 @@ export default function Hero() {
         <div className="space-y-6">
           <motion.div initial={{opacity:0,x:24}} animate={{opacity:1,x:0}} transition={{duration:.7,delay:.15}} className="surface-card relative overflow-hidden rounded-lg p-1">
             <div className="relative aspect-[1/1.02] overflow-hidden rounded-md">
-              <Image src="/meet-gandhi-ai.jpg" alt="Meet Gandhi shown as half human and half AI" fill priority className="object-cover object-center" sizes="(max-width: 1024px) 100vw, 38vw" />
+              <Image src="/meet-gandhi-ai.jpg" alt="Meet Gandhi shown as half human and half AI" fill priority loading="eager" className="object-cover object-center" sizes="(max-width: 1024px) 100vw, 38vw" />
               <div className="pointer-events-none absolute inset-y-0 left-1/2 w-1/2 overflow-hidden" aria-hidden="true">
                 <div className="relative h-full w-[200%] -translate-x-1/2 ai-half-motion">
                   <Image src="/meet-gandhi-ai.jpg" alt="" fill className="object-cover object-center" sizes="38vw" />
